@@ -1,7 +1,7 @@
-# Trabalho 1 – Laboratório de Engenharia de Software I - CEFET-MG
-Neste projeto prático, nosso grupo desenvolveu um guia prático no GitHub com o tema " Exemplo prático de uso do framework open source Apache Spark", centrando nosso roteiro no tópico de "Processamento de Dados com Apache Spark".
+# Trabalho 1 – Laboratório de Engenharia de Software I (2024/01) - CEFET-MG
+Neste projeto da matéria de Laboratório de Engenharia de Software I, ministrada pela professor Eduardo Costa, nosso grupo desenvolveu um relatório prático no GitHub com o tema " Exemplo prático de uso do framework open source Apache Spark". Dentre os usos do Spark, como processamento de dados em grande escala com módulos integrados para SQL, streaming, machine learning e processamento de gráficos, foi escolhido como foco o tópico "Processamento de Dados com Apache Spark". 
 
-## Integrantes
+## Integrantes do Grupo 3
 **Arthur Soares Higino / 20213012893** 
 
 **Luiz Carlos dos Santos Júnior / 20213008611**
@@ -15,7 +15,7 @@ Este repositório contém recursos e exemplos relacionados ao processamento de d
 ## Conteúdo
 
 - [Visão Geral do Apache Spark](#visão-geral-do-apache-spark)
-- [Instalação](#instalação)
+- [Processo de Instalação](#instalação)
 - [Exemplos](#exemplos)
 - [Referências](#referências)
 - [Conclusão](#conclusão)
@@ -350,6 +350,7 @@ Lembre-se de que esses são exemplos básicos e iniciais para demonstrar o poten
 
 Estas são algumas das referências utilizadas na criação deste roteiro:
 
+- [Enunciado do Projeto](https://eduardocunha11.github.io/firstblog/aulas/lab-programacao/Roteiro-Trabalho1.pdf)
 - [Site oficial do Apache Spark](https://spark.apache.org/)
 - [Documentação do Apache Spark](https://spark.apache.org/documentation.html)
 - [Processamento de Dados em "Tempo Real" com Apache Spark: Parte 1](https://www.infoq.com/br/articles/processamento-de-dados-apache-spark-1/).
