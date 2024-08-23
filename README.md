@@ -200,41 +200,48 @@ Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o di
 Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
 
 ## Exemplos
+<<<<<<< HEAD
 
 Este repositório inclui exemplos práticos de como usar o Apache Spark para tarefas comuns de processamento de dados.
+=======
+>>>>>>> main
 
 ### Exemplo 1: Processamento de Lote de Dados
 
-Objetivo:
-Este exemplo demonstrará como processar um arquivo de dados em lote usando o Apache Spark.
-
-1. **Criar um arquivo de dados:**
-Crie um arquivo de texto chamado dados.txt com algumas linhas de dados para processamento. Por exemplo:
+1. **Criar arquivo de dados:**
+Faça um arquivo chamado exemplo.txt com algumas linhas de dados. Exemplo:
 
    ```
-   1,João
-   2,Maria
-   3,Carlos
+   1,Arthur
+   2,Luiz
+   3,Vitorio
+   4,Eduardo
    ```
+<<<<<<< HEAD
 
 2. **Escrever o código Spark:**
 Crie um arquivo Python (por exemplo, `processamento_lote.py`) com o seguinte código para processar o arquivo de dados:
+=======
+2. **Criar código Spark:**
+Crie um arquivo Python (por exemplo, `lote.py`) com o seguinte código para processar o arquivo de dados:
+>>>>>>> main
 
    ```python
    from pyspark.sql import SparkSession
+   
+   # Criando uma sessão Spark
+   sessao_spark = SparkSession.builder.appName("ProcessamentoEmLote").getOrCreate()
+   
+   # Carregando o arquivo previamente criado
+   dados = sessao_spark.read.csv("exemplo.txt", header=False, inferSchema=True)
+   
+   # Realizando uma operação simples, como contar o número de linhas
+   numero_linhas = dados.count()
+   print(f"Quantidade total de linhas: {numero_linhas}")
+   
+   # Finalizando a sessão Spark
+   sessao_spark.stop()
 
-   # Inicialize uma sessão Spark
-   spark = SparkSession.builder.appName("ProcessamentoLote").getOrCreate()
-
-   # Carregue o arquivo de dados
-   data = spark.read.csv("dados.txt", header=False, inferSchema=True)
-
-   # Execute uma operação simples, como contar as linhas
-   count = data.count()
-   print(f"Total de linhas: {count}")
-
-   # Encerre a sessão Spark
-   spark.stop()
    
    ```
 
@@ -242,9 +249,10 @@ Crie um arquivo Python (por exemplo, `processamento_lote.py`) com o seguinte có
 Abra um terminal e execute o código Python:
 
    ```
-   $ spark-submit processamento_lote.py
-   <output> - Total de linhas: 3
+   $ spark-submit lote.py
+   <output> - Quantidade total de linhas: 4
    ```
+<<<<<<< HEAD
 
 Certifique-se de que o arquivo `dados.txt` esteja na mesma pasta onde você executou o código.
 
@@ -253,38 +261,46 @@ Certifique-se de que o arquivo `dados.txt` esteja na mesma pasta onde você exec
 Objetivo:
 Neste exemplo, você aprenderá como usar o Apache Spark para processamento em tempo real de dados usando o Spark Streaming.
 
+=======
+OBS: exemplo.txt precisa estar no mesmo diretório de lote.py.
+
+### Exemplo 2: Processamento em Tempo Real de Dados
+
+>>>>>>> main
 1. **Escrever o código Spark Streaming:**
-Crie um arquivo Python (por exemplo, `processamento_tempo_real.py`) com o seguinte código para processar dados em tempo real:
+Crie um arquivo Python (por exemplo, `tempo_real.py`) com o seguinte código para processar dados em tempo real:
 
    ```python
    from pyspark.streaming import StreamingContext
+   
+   # Configurando o StreamingContext com um intervalo de 1 segundo
+   contexto_streaming = StreamingContext(sparkContext, 1)
+   
+   # Criando um DStream a partir de uma fonte de dados em tempo real, como Kafka ou sockets
+   # Para este exemplo, utilizamos uma fonte de teste
+   fluxo_dados = contexto_streaming.socketTextStream("localhost", 9999)
+   
+   # Realizando uma operação simples, como contagem de palavras
+   contagem_palavras = fluxo_dados.flatMap(lambda linha: linha.split(" ")).countByValue()
+   
+   # Exibindo os resultados em tempo real
+   contagem_palavras.pprint()
+   
+   # Iniciando o contexto de streaming
+   contexto_streaming.start()
+   
+   # Mantendo a aplicação em execução até que seja interrompida (Ctrl+C para parar)
+   contexto_streaming.awaitTermination()
 
-   # Inicialize o StreamingContext com intervalo de 1 segundo
-   ssc = StreamingContext(sparkContext, 1)
-
-   # Crie um DStream a partir de uma fonte de dados em tempo real, como Kafka ou soquetes
-   # Neste exemplo, usaremos uma fonte de teste
-   dstream = ssc.socketTextStream("localhost", 9999)
-
-   # Execute uma operação simples, como contar as palavras
-   word_counts = dstream.flatMap(lambda line: line.split(" ")).countByValue()
-
-   # Imprima os resultados em tempo real
-   word_counts.pprint()
-
-   # Inicie o StreamingContext
-   ssc.start()
-
-   # Aguarde a terminação (Ctrl+C para encerrar)
-   ssc.awaitTermination()
    ```
 
 2. **Iniciar a Fonte de Dados em Tempo Real:**
-Em outro terminal, execute uma fonte de dados em tempo real para alimentar o exemplo. Você pode usar o comando `nc` (Netcat) para criar uma fonte de texto:
+Execute em outro terminar uma fonte de dados em tempo real, através do comando `nc` (Netcat):
 
    ```
    nc -lk 9999
    ```
+<<<<<<< HEAD
 
 3. **Executar o Código Spark Streaming:**
 No terminal onde você escreveu o código Spark Streaming, execute o código:
@@ -295,44 +311,53 @@ No terminal onde você escreveu o código Spark Streaming, execute o código:
    ```
 
 Agora, qualquer texto que você digitar no terminal com o `nc` será processado em tempo real pelo Spark.
+=======
+   
+4. **Executar o Código Spark Streaming:**
+No terminal onde você escreveu o código Spark Streaming, execute o código:
+
+   ```
+   $ spark-submit tempo_real.py
+
+   ```
+Com isso o texto digitado com `nc` será processado em tempo real pelo Spark.
+>>>>>>> main
 
 ### Exemplo 3: Integração com Spark SQL e Spark MLlib
 
-Objetivo:
-Este exemplo demonstrará como usar o Spark SQL e o Spark MLlib para análise de dados e aprendizado de máquina.
-
 1. **Escrever o código Spark SQL e MLlib:**
-Crie um arquivo Python (por exemplo, `spark_sql_mllib.py`) com o seguinte código para realizar uma tarefa de análise de dados simples com o Spark SQL e MLlib:
+Crie um arquivo Python (ex: `sql_mllib.py`) com o código para realizar uma tarefa de análise de dados utilizando Spark SQL em conjunto com MLlib:
 
    ```python
    from pyspark.sql import SparkSession
    from pyspark.ml.feature import VectorAssembler
    from pyspark.ml.regression import LinearRegression
+   
+   # Iniciando uma sessão Spark
+   sessao_spark = SparkSession.builder.appName("SparkMLlib").getOrCreate()
+   
+   # Carregando um arquivo CSV como DataFrame utilizando Spark SQL
+   dados = sessao_spark.read.csv("dados.csv", header=True, inferSchema=True)
+   
+   # Preparando os dados para treinar o modelo de regressão linear
+   colunas_caracteristicas = dados.columns[:-1]
+   montador_vetores = VectorAssembler(inputCols=colunas_caracteristicas, outputCol="caracteristicas")
+   dados = montador_vetores.transform(dados)
+   
+   # Dividindo os dados em conjuntos de treino e teste
+   dados_treino, dados_teste = dados.randomSplit([0.7, 0.3])
+   
+   # Criando e treinando um modelo de regressão linear
+   modelo_lr = LinearRegression(featuresCol="caracteristicas", labelCol="label")
+   modelo_treinado = modelo_lr.fit(dados_treino)
+   
+   # Avaliando o modelo nos dados de teste
+   resultados_teste = modelo_treinado.evaluate(dados_teste)
+   print("Raiz do Erro Quadrático Médio (RMSE):", resultados_teste.rootMeanSquaredError)
+   
+   # Finalizando a sessão Spark
+   sessao_spark.stop()
 
-   # Inicialize uma sessão Spark
-   spark = SparkSession.builder.appName("SparkSQLMLlib").getOrCreate()
-
-   # Carregue um arquivo CSV como um DataFrame usando Spark SQL
-   data = spark.read.csv("dados.csv", header=True, inferSchema=True)
-
-   # Prepare os dados para treinamento do modelo de regressão linear
-   feature_cols = data.columns[:-1]
-   vector_assembler = VectorAssembler(inputCols=feature_cols, outputCol="features")
-   data = vector_assembler.transform(data)
-
-   # Divida os dados em conjuntos de treinamento e teste
-   train_data, test_data = data.randomSplit([0.7, 0.3])
-
-   # Crie e treine um modelo de regressão linear
-   lr = LinearRegression(featuresCol="features", labelCol="label")
-   model = lr.fit(train_data)
-
-   # Avalie o modelo nos dados de teste
-   test_results = model.evaluate(test_data)
-   print("Erro Quadrático Médio (RMSE):", test_results.rootMeanSquaredError)
-
-   # Encerre a sessão Spark
-   spark.stop()
    
    ```
 
@@ -340,25 +365,27 @@ Crie um arquivo Python (por exemplo, `spark_sql_mllib.py`) com o seguinte códig
 No terminal, execute o código Python:
 
    ```
-   $ spark-submit spark_sql_mllib.py
-   <output> - Erro Quadrático Médio (RMSE): 1.7763568394002505e-15
+   $ spark-submit sql_mllib.py
+   <output> - Raiz do Erro Quadrático Médio (RMSE): 1.7763568394002505e-15
    ```
+<<<<<<< HEAD
 
 Certifique-se de que o arquivo `dados.csv` esteja na mesma pasta onde você executou o código.
+=======
+OBS: `dados.csv` precisa estar no mesmo diretório que seu código.
+>>>>>>> main
 
 ## Conclusão
 
-O **Apache Spark** é uma estrutura poderosa de código aberto para o processamento de dados em grande escala, amplamente utilizado em análise de big data, aprendizado de máquina e processamento em tempo real. Ele suporta várias linguagens de programação, incluindo Scala, Java, Python e R.
+O **Apache Spark** é uma ferramenta de código aberto útil para o processamento de dados em grande escala, muito utilizada em análise de big data, aprendizado de máquina e processamento em tempo real. Ele suporta várias linguagens de programação, incluindo Scala, Java, Python e R.
 
-Na seção de Instalação, fornecemos instruções básicas para a instalação do Apache Spark em sistemas operacionais como Windows e Linux, juntamente com os pré-requisitos necessários, como o Java.
+Na seção de Instalação, são fornecidas instruções de instalação do Apache Spark em sistemas operacionais como Windows e Linux, juntamente com os pré-requisitos.
 
-Os Exemplos mostram como usar o Apache Spark para processamento de dados em diferentes cenários:
+Na seção Exemplos é mostrado a aplicação da em cenários comuns:
 
-1. Processamento de Lote de Dados: Demonstramos como criar um arquivo de dados e processá-lo em lote usando o Apache Spark.
-2. Processamento em Tempo Real de Dados: Mostramos como usar o Spark Streaming para processar dados em tempo real a partir de uma fonte de teste.
-3. Integração com Spark SQL e Spark MLlib: Apresentamos um exemplo de como usar o Spark SQL e o Spark MLlib para análise de dados e aprendizado de máquina.
-
-Lembre-se de que esses são exemplos básicos e iniciais para demonstrar o potencial do Apache Spark. À medida que você ganha experiência, pode explorar cenários mais complexos e tirar o máximo proveito dessa poderosa estrutura para processamento de dados em grande escala.
+1. Processamento de Lote de Dados: Como criar um arquivo de dados e processá-lo em lote.
+2. Processamento em Tempo Real de Dados: Como usar o Spark Streaming para processar dados em tempo real.
+3. Integração com Spark SQL e Spark MLlib: Como usar o Spark SQL e o Spark MLlib para análise de dados e aprendizado de máquin.
 
 ## Bibliografia
 
@@ -366,5 +393,5 @@ Lembre-se de que esses são exemplos básicos e iniciais para demonstrar o poten
 - [Vídeo Descrição do Apache Spark](https://www.youtube.com/watch?v=4TE6AGQ0IzI)
 - [Site oficial do Apache Spark](https://spark.apache.org/)
 - [Documentação do Apache Spark](https://spark.apache.org/documentation.html)
-- [Processamento de Dados em "Tempo Real" com Apache Spark: Parte 1](https://www.infoq.com/br/articles/processamento-de-dados-apache-spark-1/).
+- [ [Spark] Structured Streaming - Processamento de dados perto do tempo real com Spark](https://www.youtube.com/watch?v=0IuMhbgj2ng)
 - [Processamento em lote](https://www.ibm.com/docs/pt-br/cloud-paks/cp-data/4.0?topic=openscale-batch-processing-overview).
