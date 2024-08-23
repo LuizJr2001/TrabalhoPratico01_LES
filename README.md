@@ -55,6 +55,7 @@ Java
 Scala
 Python
 R
+ ```
 
 O Spark também oferece APIs que facilitam a integração com essas linguagens, permitindo que os desenvolvedores escrevam código de forma mais intuitiva e eficiente. Além disso, ele oferece uma ampla gama de bibliotecas e ferramentas integradas que permitem a análise de dados, o aprendizado de máquina, o processamento em tempo real e a integração perfeita com outras tecnologias, como Hadoop e sistemas de armazenamento distribuído. Essas características tornam o Apache Spark uma escolha poderosa para empresas e organizações que desejam extrair insights valiosos de seus dados em um ambiente escalável e eficiente. Sua popularidade contínua e sua comunidade ativa de desenvolvedores contribuem para a evolução e aprimoramento constantes dessa estrutura.
 
