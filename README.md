@@ -301,7 +301,7 @@ Execute em outro terminar uma fonte de dados em tempo real, através do comando 
    $ nc -lk 9999
    ```
    
-4. **Executar o Código Spark Streaming:**
+3. **Executar o Código Spark Streaming:**
 No terminal onde você escreveu o código Spark Streaming, execute o código:
 
    ```
@@ -347,7 +347,7 @@ Crie um arquivo Python (ex: `sql_mllib.py`) com o código para realizar uma tare
 
    
    ```
-3. **Executar o Código:**
+2. **Executar o Código:**
 No terminal, execute o código Python:
 
    ```
@@ -358,15 +358,7 @@ OBS: `dados.csv` precisa estar no mesmo diretório que seu código.
 
 ## Conclusão
 
-O **Apache Spark** é uma ferramenta de código aberto útil para o processamento de dados em grande escala, muito utilizada em análise de big data, aprendizado de máquina e processamento em tempo real. Ele suporta várias linguagens de programação, incluindo Scala, Java, Python e R.
-
-Na seção de Instalação, são fornecidas instruções de instalação do Apache Spark em sistemas operacionais como Windows e Linux, juntamente com os pré-requisitos.
-
-Na seção Exemplos é mostrado a aplicação da em cenários comuns:
-
-1. Processamento de Lote de Dados: Como criar um arquivo de dados e processá-lo em lote.
-2. Processamento em Tempo Real de Dados: Como usar o Spark Streaming para processar dados em tempo real.
-3. Integração com Spark SQL e Spark MLlib: Como usar o Spark SQL e o Spark MLlib para análise de dados e aprendizado de máquin.
+O roteiro é uma introdução informativa e prática ao Apache Spark, abordando tanto a instalação quanto exemplos de uso básicos, que servem como ponto de partida para explorar as capacidades desta poderosa ferramenta de processamento de dados. A mensagem subjacente é que o Apache Spark é acessível para iniciantes, mas também robusto o suficiente para suportar cenários mais complexos conforme a experiência do usuário cresce.
 
 ## Bibliografia
 
