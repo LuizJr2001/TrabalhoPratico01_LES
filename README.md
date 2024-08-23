@@ -71,6 +71,7 @@ Antes de instalar o Apache Spark, certifique-se de que você tenha o seguinte in
 
    ```
    java -version
+   ```
 
 Se o Java não estiver instalado ou estiver em uma versão anterior, siga as etapas abaixo para instalá-lo no seu sistema operacional.
 
@@ -196,11 +197,7 @@ Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o di
 Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
 
 ## Exemplos
-<<<<<<< HEAD
-
 Este repositório inclui exemplos práticos de como usar o Apache Spark para tarefas comuns de processamento de dados.
-=======
->>>>>>> main
 
 ### Exemplo 1: Processamento de Lote de Dados
 
