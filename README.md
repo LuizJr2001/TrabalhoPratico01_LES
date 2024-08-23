@@ -224,7 +224,6 @@ Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o di
 Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
 
 ## Exemplos
-Este repositório inclui exemplos práticos de como usar o Apache Spark para tarefas comuns de processamento de dados.
 
 ### Exemplo 1: Processamento de Lote de Dados
 
@@ -237,14 +236,8 @@ Faça um arquivo chamado exemplo.txt com algumas linhas de dados. Exemplo:
    3,Vitorio
    4,Eduardo
    ```
-<<<<<<< HEAD
-
-2. **Escrever o código Spark:**
-Crie um arquivo Python (por exemplo, `processamento_lote.py`) com o seguinte código para processar o arquivo de dados:
-=======
 2. **Criar código Spark:**
 Crie um arquivo Python (por exemplo, `lote.py`) com o seguinte código para processar o arquivo de dados:
->>>>>>> main
 
    ```python
    from pyspark.sql import SparkSession
@@ -264,7 +257,6 @@ Crie um arquivo Python (por exemplo, `lote.py`) com o seguinte código para proc
 
    
    ```
-
 3. **Executar o Código:**
 Abra um terminal e execute o código Python:
 
@@ -272,21 +264,10 @@ Abra um terminal e execute o código Python:
    $ spark-submit lote.py
    <output> - Quantidade total de linhas: 4
    ```
-<<<<<<< HEAD
-
-Certifique-se de que o arquivo `dados.txt` esteja na mesma pasta onde você executou o código.
-
-### Exemplo 2: Processamento em Tempo Real de Dados
-
-Objetivo:
-Neste exemplo, você aprenderá como usar o Apache Spark para processamento em tempo real de dados usando o Spark Streaming.
-
-=======
 OBS: exemplo.txt precisa estar no mesmo diretório de lote.py.
 
 ### Exemplo 2: Processamento em Tempo Real de Dados
 
->>>>>>> main
 1. **Escrever o código Spark Streaming:**
 Crie um arquivo Python (por exemplo, `tempo_real.py`) com o seguinte código para processar dados em tempo real:
 
@@ -313,25 +294,12 @@ Crie um arquivo Python (por exemplo, `tempo_real.py`) com o seguinte código par
    contexto_streaming.awaitTermination()
 
    ```
-
 2. **Iniciar a Fonte de Dados em Tempo Real:**
 Execute em outro terminar uma fonte de dados em tempo real, através do comando `nc` (Netcat):
 
    ```
-   nc -lk 9999
+   $ nc -lk 9999
    ```
-<<<<<<< HEAD
-
-3. **Executar o Código Spark Streaming:**
-No terminal onde você escreveu o código Spark Streaming, execute o código:
-
-   ```
-   spark-submit processamento_tempo_real.py
-
-   ```
-
-Agora, qualquer texto que você digitar no terminal com o `nc` será processado em tempo real pelo Spark.
-=======
    
 4. **Executar o Código Spark Streaming:**
 No terminal onde você escreveu o código Spark Streaming, execute o código:
@@ -341,7 +309,6 @@ No terminal onde você escreveu o código Spark Streaming, execute o código:
 
    ```
 Com isso o texto digitado com `nc` será processado em tempo real pelo Spark.
->>>>>>> main
 
 ### Exemplo 3: Integração com Spark SQL e Spark MLlib
 
@@ -380,7 +347,6 @@ Crie um arquivo Python (ex: `sql_mllib.py`) com o código para realizar uma tare
 
    
    ```
-
 3. **Executar o Código:**
 No terminal, execute o código Python:
 
@@ -388,12 +354,7 @@ No terminal, execute o código Python:
    $ spark-submit sql_mllib.py
    <output> - Raiz do Erro Quadrático Médio (RMSE): 1.7763568394002505e-15
    ```
-<<<<<<< HEAD
-
-Certifique-se de que o arquivo `dados.csv` esteja na mesma pasta onde você executou o código.
-=======
 OBS: `dados.csv` precisa estar no mesmo diretório que seu código.
->>>>>>> main
 
 ## Conclusão
 
