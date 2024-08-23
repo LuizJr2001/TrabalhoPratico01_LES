@@ -75,6 +75,14 @@ Antes de instalar o Apache Spark, certifique-se de que você tenha o seguinte in
 
 Se o Java não estiver instalado ou estiver em uma versão anterior, siga as etapas abaixo para instalá-lo no seu sistema operacional.
 
+### Windows
+
+1. Acesse o site oficial da Oracle Java em [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html).
+2. Faça o download do instalador Java adequado para o seu sistema (32 bits ou 64 bits).
+3. Execute o instalador baixado e siga as instruções na tela para concluir a instalação.
+
+### Linux
+
 Abra um terminal e execute os seguintes comandos:
 
 ```
@@ -85,9 +93,16 @@ sudo apt install default-jdk
 
 ### Download JDK
 
-Além do Java, você precisrá realizar o download do JDK (Java Development Kit)
+Além do Java, você precisrá realizar o download do JDK (Java Development Kit) 
 
-#### Linux (Ubuntu)
+#### Windows:
+
+1. Acesse o site oficial da Oracle Java em [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html).
+2. Procure a seção "Oracle JDK" e clique no botão "Download" para o JDK correspondente à sua arquitetura (32 bits ou 64 bits).
+3. Você será redirecionado para a página de termos e condições. Aceite os termos e clique em "Download" novamente.
+4. O download do instalador do JDK será iniciado. Execute o instalador baixado e siga as instruções na tela para concluir a instalação.
+
+#### Linux (Ubuntu):
 
 No Ubuntu, você pode instalar o OpenJDK, que é uma implementação de código aberto do Java. Para instalar o OpenJDK 8, siga as etapas abaixo:
 
@@ -110,11 +125,29 @@ Agora, com o JDK devidamente instalado em seu sistema, você pode prosseguir com
 python --version
 ```
 
+Se o Python não estiver instalado, siga as etapas apropriadas para o seu sistema operacional:
+
+#### Windows
+
+1. Baixe o instalador Python mais recente para Windows em [python.org/downloads](https://www.python.org/downloads/windows/).
+
+2. Execute o instalador baixado e siga as instruções na tela. Certifique-se de marcar a opção "Add Python to PATH" durante a instalação.
+
+#### Linux (Ubuntu)
+
 O Python é pré-instalado na maioria das distribuições Linux. No entanto, você pode instalar o Python 3 com o seguinte comando:
 
 ```shell
 sudo apt update
 sudo apt install python3
+```
+
+#### Linux (Fedora)
+
+Para instalar o Python 3 no Fedora, use o seguinte comando:
+
+```shell
+sudo dnf install python3
 ```
 
 Após a instalação do Python, você pode instalar o Jupyter Notebook:
@@ -133,7 +166,7 @@ jupyter notebook
 
 Isso abrirá o Jupyter Notebook em seu navegador padrão. Você pode criar um novo notebook Python e executar comandos Python nele.
 
-### Pyshark
+### Instalação do pyshark
 
 Agora que você tem o Python e o Jupyter Notebook instalados, você pode instalar o pyshark, que é uma biblioteca Python para análise de tráfego de rede.
 
@@ -150,9 +183,7 @@ Após a conclusão da instalação, você pode usar o pyshark em seu ambiente Ju
 Lembre-se de que você deve ter o Apache Spark e o arquivo CSV "dados.csv" configurados e prontos, como mencionado no início do README, para executar o código original com sucesso.
 
 ### Instalação do numpy
-
 Para manipular arrays multidimensionais e funções matemáticas de alto desempenho para trabalhar com esses arrays, os quais armazenam os dados a manipular, é comum o uso da biblioteca numpy.
-
    ```
    pip install numpy
    ```
@@ -164,13 +195,12 @@ Para manipular arrays multidimensionais e funções matemáticas de alto desempe
 3. Baixe o arquivo para o seu sistema local.
 
 ### Instalação do Apache Spark
-
+   
 1. Extraia o arquivo baixado em um diretório de sua escolha. Você pode usar um comando como este:
 
    ```
    tar -xzf spark-3.2.0-bin-hadoop3.2.tgz
    ```
-
 Certifique-se de substituir "spark-3.2.0-bin-hadoop3.2.tgz" pelo nome do arquivo que você baixou.  
 
 2. Defina a variável de ambiente `SPARK_HOME` apontando para o diretório do Spark e adicione o diretório `bin` ao seu `PATH`. Você pode fazer isso adicionando as seguintes linhas ao seu arquivo `.bashrc`, `.bash_profile` ou `.zshrc`, dependendo do seu shell:
@@ -179,7 +209,6 @@ Certifique-se de substituir "spark-3.2.0-bin-hadoop3.2.tgz" pelo nome do arquivo
    export SPARK_HOME=/caminho/para/o/diretório/spark-3.2.0
    export PATH=$SPARK_HOME/bin:$PATH
    ```
-
 Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o diretório onde o Spark foi extraído.
 
 3. Após salvar as alterações no seu arquivo de perfil, atualize as variáveis de ambiente com o comando:
@@ -187,13 +216,11 @@ Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o di
    ```
    source ~/.bashrc  # ou source ~/.bash_profile, dependendo do seu arquivo de perfil
    ```
-
 4. O Apache Spark agora deve estar instalado e configurado em seu sistema. Para verificar a instalação, você pode executar o seguinte comando para iniciar o shell interativo do Spark:
 
    ```
    spark-shell
     ```
-
 Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
 
 ## Exemplos
