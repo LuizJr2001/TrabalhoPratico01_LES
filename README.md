@@ -15,8 +15,8 @@ Neste projeto da matéria de Laboratório de Engenharia de Software I, ministrad
 - [Visão Geral](#visão-geral)
 - [Processo de Instalação](#instalação)
 - [Exemplos](#exemplos)
-- [Referências](#referências)
 - [Conclusão](#conclusão)
+- [Bibliografia](#referências)
 
 ## Visão Geral
 
@@ -61,7 +61,7 @@ O Spark também oferece APIs que facilitam a integração com essas linguagens, 
 
 ## Processo de Instalação
 
-A instalação do Apache Spark pode ser feita em várias plataformas, e o processo varia conforme o sistema operacional. Encontra-se no texto abaixo formas de instação no windows e no linux com distros baseadas em Debian. Em caso de dúvida: [documentação oficial do Apache Spark](https://spark.apache.org/documentation.html) 
+A instalação do Apache Spark pode ser feita em várias plataformas, e o processo varia conforme o sistema operacional. Encontra-se no texto abaixo formas de instação no linux com distros baseadas em Debian. Em caso de dúvida: [documentação oficial do Apache Spark](https://spark.apache.org/documentation.html) 
 
 ### Necessário
 
@@ -74,14 +74,6 @@ Antes de instalar o Apache Spark, certifique-se de que você tenha o seguinte in
 
 Se o Java não estiver instalado ou estiver em uma versão anterior, siga as etapas abaixo para instalá-lo no seu sistema operacional.
 
-### Windows
-
-1. Acesse o site oficial da Oracle Java em [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html).
-2. Faça o download do instalador Java adequado para o seu sistema (32 bits ou 64 bits).
-3. Execute o instalador baixado e siga as instruções na tela para concluir a instalação.
-
-### Linux
-
 Abra um terminal e execute os seguintes comandos:
 
 ```
@@ -93,13 +85,6 @@ sudo apt install default-jdk
 ### Download JDK
 
 Além do Java, você precisrá realizar o download do JDK (Java Development Kit)
-
-#### Windows
-
-1. Acesse o site oficial da Oracle Java em [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html).
-2. Procure a seção "Oracle JDK" e clique no botão "Download" para o JDK correspondente à sua arquitetura (32 bits ou 64 bits).
-3. Você será redirecionado para a página de termos e condições. Aceite os termos e clique em "Download" novamente.
-4. O download do instalador do JDK será iniciado. Execute o instalador baixado e siga as instruções na tela para concluir a instalação.
 
 #### Linux (Ubuntu)
 
@@ -124,29 +109,11 @@ Agora, com o JDK devidamente instalado em seu sistema, você pode prosseguir com
 python --version
 ```
 
-Se o Python não estiver instalado, siga as etapas apropriadas para o seu sistema operacional:
-
-#### Windows
-
-1. Baixe o instalador Python mais recente para Windows em [python.org/downloads](https://www.python.org/downloads/windows/).
-
-2. Execute o instalador baixado e siga as instruções na tela. Certifique-se de marcar a opção "Add Python to PATH" durante a instalação.
-
-#### Linux (Ubuntu)
-
 O Python é pré-instalado na maioria das distribuições Linux. No entanto, você pode instalar o Python 3 com o seguinte comando:
 
 ```shell
 sudo apt update
 sudo apt install python3
-```
-
-#### Linux (Fedora)
-
-Para instalar o Python 3 no Fedora, use o seguinte comando:
-
-```shell
-sudo dnf install python3
 ```
 
 Após a instalação do Python, você pode instalar o Jupyter Notebook:
@@ -165,7 +132,7 @@ jupyter notebook
 
 Isso abrirá o Jupyter Notebook em seu navegador padrão. Você pode criar um novo notebook Python e executar comandos Python nele.
 
-### Instalação do pyshark
+### Pyshark
 
 Agora que você tem o Python e o Jupyter Notebook instalados, você pode instalar o pyshark, que é uma biblioteca Python para análise de tráfego de rede.
 
@@ -389,9 +356,7 @@ Os Exemplos mostram como usar o Apache Spark para processamento de dados em dife
 
 Lembre-se de que esses são exemplos básicos e iniciais para demonstrar o potencial do Apache Spark. À medida que você ganha experiência, pode explorar cenários mais complexos e tirar o máximo proveito dessa poderosa estrutura para processamento de dados em grande escala.
 
-## Referências
-
-Estas são algumas das referências utilizadas na criação deste roteiro:
+## Bibliografia
 
 - [Enunciado do Projeto](https://eduardocunha11.github.io/firstblog/aulas/lab-programacao/Roteiro-Trabalho1.pdf)
 - [Vídeo Descrição do Apache Spark](https://www.youtube.com/watch?v=4TE6AGQ0IzI)
