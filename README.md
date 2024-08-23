@@ -1,34 +1,64 @@
-# Trabalho 1 – Laboratório de Engenharia de Software I (2024/01) - CEFET-MG
-Neste projeto da matéria de Laboratório de Engenharia de Software I, ministrada pela professor Eduardo Costa, nosso grupo desenvolveu um relatório prático no GitHub com o tema " Exemplo prático de uso do framework open source Apache Spark". Dentre os usos do Spark, como processamento de dados em grande escala com módulos integrados para SQL, streaming, machine learning e processamento de gráficos, foi escolhido como foco o tópico "Processamento de Dados com Apache Spark". 
+# Roteiro Prático – Laboratório de Engenharia de Software I (2024/01) - CEFET-MG
+
+Neste projeto da matéria de Laboratório de Engenharia de Software I, ministrada pela professor Eduardo Costa, nosso grupo desenvolveu um relatório prático no GitHub com o tema " Exemplo prático de uso do framework open source Apache Spark". Dentre os usos do Spark, como processamento de dados em grande escala com módulos integrados para SQL, streaming, machine learning e processamento de gráficos, foi escolhido como foco o tópico "Processamento de Dados com Apache Spark".
 
 ## Integrantes do Grupo 3
-**Arthur Soares Higino / 20213012893** 
+
+**Arthur Soares Higino / 20213012893**
 
 **Luiz Carlos dos Santos Júnior / 20213008611**
 
 **Vitório Marcos Abreu Rodrigues / 20193023089**
 
-# Processamento de Dados com Apache Spark
+## Sumário
 
-Este repositório contém recursos e exemplos relacionados ao processamento de dados com o Apache Spark. O Apache Spark é uma poderosa estrutura de código aberto para processamento de dados em grande escala e é amplamente utilizado para análise de big data, aprendizado de máquina e processamento em tempo real.
-
-## Conteúdo
-
-- [Visão Geral do Apache Spark](#visão-geral-do-apache-spark)
+- [Visão Geral](#visão-geral)
 - [Processo de Instalação](#instalação)
 - [Exemplos](#exemplos)
 - [Referências](#referências)
 - [Conclusão](#conclusão)
 
-## Visão Geral do Apache Spark
+## Visão Geral
 
-O Apache Spark é uma notável estrutura de processamento de dados distribuída, altamente valorizada por sua eficiência no tratamento de conjuntos de dados de grande escala de maneira simultânea. Sua flexibilidade é um dos principais atrativos, uma vez que oferece suporte a diversas linguagens de programação, incluindo Scala, Java, Python e R. Essa diversidade de linguagens torna o Apache Spark uma escolha amplamente preferida entre cientistas de dados, engenheiros de big data e profissionais de análise, pois permite que eles utilizem a linguagem que melhor se adequa às suas necessidades e competências individuais. 
+O Apache Spark é uma poderosa ferramenta de processamento de dados em larga escala, oferecendo suporte a várias linguagens e permitindo análises em tempo real. Ele se destaca por sua velocidade, utilizando processamento em memória e otimizando consultas, sendo ideal para machine learning e inteligência artificial. A integração com outras plataformas potencializa seu uso.
 
-A capacidade do Apache Spark de processar dados em paralelo em uma arquitetura distribuída é crucial para lidar com as crescentes demandas de dados da era moderna. Isso significa que ele pode dividir tarefas de processamento em várias unidades independentes, executando-as em vários nós ou máquinas, acelerando significativamente a análise e o processamento de conjuntos de dados massivos. 
+O Apache Spark oferece vários benefícios significativos, que o tornam uma escolha popular para processamento de grandes volumes de dados e análise em tempo real. Aqui estão alguns dos principais benefícios:
 
-Além disso, o Apache Spark oferece uma ampla gama de bibliotecas e ferramentas integradas que permitem a análise de dados, o aprendizado de máquina, o processamento em tempo real e a integração perfeita com outras tecnologias, como Hadoop e sistemas de armazenamento distribuído. Essas características tornam o Apache Spark uma escolha poderosa para empresas e organizações que desejam extrair insights valiosos de seus dados em um ambiente escalável e eficiente. Sua popularidade contínua e sua comunidade ativa de desenvolvedores contribuem para a evolução e aprimoramento constantes dessa estrutura.
+**Velocidade**: O Spark realiza processamento em memória, o que resulta em um desempenho até 100 vezes mais rápido do que os sistemas baseados em disco, como o Hadoop MapReduce. Isso permite operações ágeis em tempo real.
 
-## Instalação
+**Flexibilidade**: O Spark suporta diversas linguagens de programação, como Java, Scala, Python e R, facilitando a adoção por equipes com diferentes habilidades.
+
+**Processamento Unificado**: Ele permite a realização de diferentes tipos de processamento de dados (batch, streaming, interativo e em tempo real) em uma única plataforma, simplificando a arquitetura de dados.
+
+**API Intuitiva**: O Spark oferece APIs de alto nível e estrutura de dados como DataFrames e RDDs (Resilient Distributed Datasets), que simplificam o desenvolvimento e a manipulação de dados.
+
+**Suporte a Múltiplos Fontes de Dados**: O Spark pode conectar-se a várias fontes de dados, incluindo HDFS, Amazon S3, NoSQL databases (como MongoDB, Cassandra) e sistemas de arquivos locais, facilitando a integração de dados diversos.
+
+**Bibliotecas Integradas**: O Spark possui bibliotecas nativas para tarefas comuns, incluindo:
+
+Spark SQL: Para consulta de dados usando SQL.
+MLlib: Para aprendizado de máquina.
+GraphX: Para computação em grafos e análise de redes.
+Spark Streaming: Para processamento de dados em tempo real.
+Tolerância a Falhas: O modelo de RDD permite que as falhas sejam recuperadas automaticamente por meio do reprocessamento de dados, garantindo a robustez do sistema.
+
+**Escalabilidade**: O Spark pode ser executado em um único computador ou em clusters, escalando facilmente para atender às necessidades de processamento de dados em grande escala.
+
+**Atuação em Tempo Real**: O Spark Streaming permite o processamento contínuo de dados em tempo real, possibilitando análises rápidas e reações instantâneas a novas informações.
+
+Esses benefícios fazem do Apache Spark uma ferramenta poderosa para empresas que buscam extrair insights valiosos de grandes volumes de dados de forma rápida e eficiente.
+
+O Apache Spark oferece suporte a várias linguagens de programação, permitindo que desenvolvedores utilizem a linguagem com a qual estão mais familiarizados. As principais linguagens suportadas pelo Apache Spark são:
+
+ ```
+Java
+Scala
+Python
+R
+
+O Spark também oferece APIs que facilitam a integração com essas linguagens, permitindo que os desenvolvedores escrevam código de forma mais intuitiva e eficiente. Além disso, ele oferece uma ampla gama de bibliotecas e ferramentas integradas que permitem a análise de dados, o aprendizado de máquina, o processamento em tempo real e a integração perfeita com outras tecnologias, como Hadoop e sistemas de armazenamento distribuído. Essas características tornam o Apache Spark uma escolha poderosa para empresas e organizações que desejam extrair insights valiosos de seus dados em um ambiente escalável e eficiente. Sua popularidade contínua e sua comunidade ativa de desenvolvedores contribuem para a evolução e aprimoramento constantes dessa estrutura.
+
+## Processo de Instalação
 
 A instalação do Apache Spark pode ser realizada em várias plataformas. Abaixo, fornecemos instruções básicas para a instalação em sistemas operacionais, como Windows e Linux. Certifique-se de verificar a [documentação oficial do Apache Spark](https://spark.apache.org/documentation.html) para obter instruções detalhadas e informações atualizadas.
 
@@ -61,16 +91,16 @@ sudo apt install default-jdk
 
 ### Download JDK
 
-Além do Java, você precisrá realizar o download do JDK (Java Development Kit) 
+Além do Java, você precisrá realizar o download do JDK (Java Development Kit)
 
-#### Windows:
+#### Windows
 
 1. Acesse o site oficial da Oracle Java em [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html).
 2. Procure a seção "Oracle JDK" e clique no botão "Download" para o JDK correspondente à sua arquitetura (32 bits ou 64 bits).
 3. Você será redirecionado para a página de termos e condições. Aceite os termos e clique em "Download" novamente.
 4. O download do instalador do JDK será iniciado. Execute o instalador baixado e siga as instruções na tela para concluir a instalação.
 
-#### Linux (Ubuntu):
+#### Linux (Ubuntu)
 
 No Ubuntu, você pode instalar o OpenJDK, que é uma implementação de código aberto do Java. Para instalar o OpenJDK 8, siga as etapas abaixo:
 
@@ -151,7 +181,9 @@ Após a conclusão da instalação, você pode usar o pyshark em seu ambiente Ju
 Lembre-se de que você deve ter o Apache Spark e o arquivo CSV "dados.csv" configurados e prontos, como mencionado no início do README, para executar o código original com sucesso.
 
 ### Instalação do numpy
+
 Para manipular arrays multidimensionais e funções matemáticas de alto desempenho para trabalhar com esses arrays, os quais armazenam os dados a manipular, é comum o uso da biblioteca numpy.
+
    ```
    pip install numpy
    ```
@@ -163,12 +195,13 @@ Para manipular arrays multidimensionais e funções matemáticas de alto desempe
 3. Baixe o arquivo para o seu sistema local.
 
 ### Instalação do Apache Spark
-   
+
 1. Extraia o arquivo baixado em um diretório de sua escolha. Você pode usar um comando como este:
 
    ```
    tar -xzf spark-3.2.0-bin-hadoop3.2.tgz
    ```
+
 Certifique-se de substituir "spark-3.2.0-bin-hadoop3.2.tgz" pelo nome do arquivo que você baixou.  
 
 2. Defina a variável de ambiente `SPARK_HOME` apontando para o diretório do Spark e adicione o diretório `bin` ao seu `PATH`. Você pode fazer isso adicionando as seguintes linhas ao seu arquivo `.bashrc`, `.bash_profile` ou `.zshrc`, dependendo do seu shell:
@@ -177,6 +210,7 @@ Certifique-se de substituir "spark-3.2.0-bin-hadoop3.2.tgz" pelo nome do arquivo
    export SPARK_HOME=/caminho/para/o/diretório/spark-3.2.0
    export PATH=$SPARK_HOME/bin:$PATH
    ```
+
 Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o diretório onde o Spark foi extraído.
 
 3. Após salvar as alterações no seu arquivo de perfil, atualize as variáveis de ambiente com o comando:
@@ -184,15 +218,17 @@ Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o di
    ```
    source ~/.bashrc  # ou source ~/.bash_profile, dependendo do seu arquivo de perfil
    ```
+
 4. O Apache Spark agora deve estar instalado e configurado em seu sistema. Para verificar a instalação, você pode executar o seguinte comando para iniciar o shell interativo do Spark:
 
    ```
    spark-shell
     ```
+
 Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
 
-
 ## Exemplos
+
 Este repositório inclui exemplos práticos de como usar o Apache Spark para tarefas comuns de processamento de dados.
 
 ### Exemplo 1: Processamento de Lote de Dados
@@ -208,6 +244,7 @@ Crie um arquivo de texto chamado dados.txt com algumas linhas de dados para proc
    2,Maria
    3,Carlos
    ```
+
 2. **Escrever o código Spark:**
 Crie um arquivo Python (por exemplo, `processamento_lote.py`) com o seguinte código para processar o arquivo de dados:
 
@@ -228,6 +265,7 @@ Crie um arquivo Python (por exemplo, `processamento_lote.py`) com o seguinte có
    spark.stop()
    
    ```
+
 3. **Executar o Código:**
 Abra um terminal e execute o código Python:
 
@@ -235,13 +273,13 @@ Abra um terminal e execute o código Python:
    $ spark-submit processamento_lote.py
    <output> - Total de linhas: 3
    ```
+
 Certifique-se de que o arquivo `dados.txt` esteja na mesma pasta onde você executou o código.
 
 ### Exemplo 2: Processamento em Tempo Real de Dados
 
 Objetivo:
 Neste exemplo, você aprenderá como usar o Apache Spark para processamento em tempo real de dados usando o Spark Streaming.
-
 
 1. **Escrever o código Spark Streaming:**
 Crie um arquivo Python (por exemplo, `processamento_tempo_real.py`) com o seguinte código para processar dados em tempo real:
@@ -268,20 +306,22 @@ Crie um arquivo Python (por exemplo, `processamento_tempo_real.py`) com o seguin
    # Aguarde a terminação (Ctrl+C para encerrar)
    ssc.awaitTermination()
    ```
+
 2. **Iniciar a Fonte de Dados em Tempo Real:**
 Em outro terminal, execute uma fonte de dados em tempo real para alimentar o exemplo. Você pode usar o comando `nc` (Netcat) para criar uma fonte de texto:
 
    ```
-   $ nc -lk 9999
+   nc -lk 9999
    ```
-   
+
 3. **Executar o Código Spark Streaming:**
 No terminal onde você escreveu o código Spark Streaming, execute o código:
 
    ```
-   $ spark-submit processamento_tempo_real.py
+   spark-submit processamento_tempo_real.py
 
    ```
+
 Agora, qualquer texto que você digitar no terminal com o `nc` será processado em tempo real pelo Spark.
 
 ### Exemplo 3: Integração com Spark SQL e Spark MLlib
@@ -323,6 +363,7 @@ Crie um arquivo Python (por exemplo, `spark_sql_mllib.py`) com o seguinte códig
    spark.stop()
    
    ```
+
 3. **Executar o Código:**
 No terminal, execute o código Python:
 
@@ -330,6 +371,7 @@ No terminal, execute o código Python:
    $ spark-submit spark_sql_mllib.py
    <output> - Erro Quadrático Médio (RMSE): 1.7763568394002505e-15
    ```
+
 Certifique-se de que o arquivo `dados.csv` esteja na mesma pasta onde você executou o código.
 
 ## Conclusão
@@ -351,6 +393,7 @@ Lembre-se de que esses são exemplos básicos e iniciais para demonstrar o poten
 Estas são algumas das referências utilizadas na criação deste roteiro:
 
 - [Enunciado do Projeto](https://eduardocunha11.github.io/firstblog/aulas/lab-programacao/Roteiro-Trabalho1.pdf)
+- [Vídeo Descrição do Apache Spark](https://www.youtube.com/watch?v=4TE6AGQ0IzI)
 - [Site oficial do Apache Spark](https://spark.apache.org/)
 - [Documentação do Apache Spark](https://spark.apache.org/documentation.html)
 - [Processamento de Dados em "Tempo Real" com Apache Spark: Parte 1](https://www.infoq.com/br/articles/processamento-de-dados-apache-spark-1/).
