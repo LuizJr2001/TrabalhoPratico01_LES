@@ -61,11 +61,7 @@ O Spark também oferece APIs que facilitam a integração com essas linguagens, 
 
 ## Processo de Instalação
 
-<<<<<<< HEAD
-A instalação do Apache Spark pode ser feita em várias plataformas, e o processo varia conforme o sistema operacional. Encontra-se no texto abaixo formas de instação no linux com distros baseadas em Debian. Em caso de dúvida: [documentação oficial do Apache Spark](https://spark.apache.org/documentation.html) 
-=======
 A instalação do Apache Spark pode ser realizada em várias plataformas. Abaixo, fornecemos instruções básicas para a instalação em sistemas operacionais, como Windows e Linux. Certifique-se de verificar a [documentação oficial do Apache Spark](https://spark.apache.org/documentation.html) para obter instruções detalhadas e informações atualizadas.
->>>>>>> parent of c32479c (Update)
 
 ### Pré-requisitos
 
